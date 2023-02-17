@@ -6,13 +6,14 @@ import { Experimente } from '../Components/Langing_Page/Experimente'
 import { Footer } from '../Components/Footer'
 import { useAuth } from '../context/AppContext'
 import SingleArticle from './SingleArticle'
+import SearchResult from './Search_Result'
 
 
 const Home: NextPage = () => { 
   const {user} = useAuth()
   return (
     <> 
-      <Header/>
+      {/* <Header/>
       <Articles />
         {
           !user ?
@@ -22,7 +23,8 @@ const Home: NextPage = () => {
           </>
             : null
         }
-      <Footer/>
+      <Footer/> */}
+      <SearchResult/>
     </>
   )
 }

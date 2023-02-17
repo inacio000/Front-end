@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ForumBox = styled.section`
     display: flex;
 
-    width: 1400px;
+    width: 100%;
     height: 200px;
     margin: auto;
     margin-top: 5px;
@@ -12,6 +12,34 @@ export const ForumBox = styled.section`
     padding: 30px 15px;
     box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
     background: ${({theme})=> theme.colors.standard.white};
+    border: 2px solid #000;
+
+    @media(max-width: ${({theme}) => theme.tablet}) {
+		margin: auto;
+        width: 100%;
+        height: 230px;
+        padding-top: 30px;
+        padding-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+	}
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+        width: 100%;
+        height: 230px;
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        border-radius: 0;
+    }
 
 `
 

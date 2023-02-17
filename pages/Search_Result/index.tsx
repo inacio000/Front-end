@@ -6,7 +6,7 @@ import Input from "../../Components/Input";
 import Menu from "../../Components/Menu";
 import { OmungaSocialMedias } from "../../Components/OmungaSocialMedias";
 import { useArticle } from "../../context/ArticlesProvider";
-import { ResoultSection, SearchResultSection, Title } from "./styles";
+import { SearchResultSection, Resoult, ResoultSection, Title } from "./styles";
 import Button from "../../Components/Button";
 import { FaAngleDown } from "react-icons/fa";
 import { CardFlexLayout } from "./styles";
@@ -27,23 +27,26 @@ export default function SearchResult () {
     
 
     useEffect(() => {
-        setArticleData(articles.slice(0, 3))
+        setArticleData(articles.slice(0, 8))
     }, [])
     
     return (
         <>
             <Menu/>
             <SearchResultSection>
-                <Input placeholder="Pesquisar por um assunto" ButtonText={"Pesquisar"} />
                 <ResoultSection>
-                    <div>
-                        <h1>Resultados da sua pesquisa: <span>"Javascript"</span></h1>
-                        <p>Foram encontrados 31 artigos e 7 forum relevantes a esta pesquisa</p>
-                    </div>
-                    <div>
-                        <Button Text="Filtrar por" Icon={<FaAngleDown />} />
-                    </div>
+                    <Input placeholder="Pesquisar por um assunto" ButtonText={"Pesquisar"} />
+                    <Resoult>
+                        <div>
+                            <h1>Resultados da sua pesquisa: <span>"Javascript"</span></h1>
+                            <p>Foram encontrados 31 artigos e 7 forum relevantes a esta pesquisa</p>
+                        </div>
+                        <div>
+                            <Button Text="Filtrar por" Icon={<FaAngleDown />} />
+                        </div>
+                    </Resoult>
                 </ResoultSection>
+
                 <Container display="">
                     <Title>
                         <h1><span>31</span></h1>
@@ -60,12 +63,16 @@ export default function SearchResult () {
                         ))}
                     </CardFlexLayout>
                 </Container>
+
                 <Title>
                         <h1><span>7</span></h1>
                         <h1>Forums</h1>
                 </Title>
+
                 <ForumsCards />
+
                 <OmungaSocialMedias />
+
             </SearchResultSection>
             <Footer />
         </>

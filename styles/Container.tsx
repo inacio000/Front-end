@@ -24,4 +24,4 @@ export const Container= styled.div<containerProps>`
 		border: 1px solid red;
 		width: 90%;
 	}
-`
+`   

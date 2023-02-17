@@ -13,5 +13,17 @@ export const SocialMediasBox = styled.div`
     svg {
         cursor: pointer;
     }
+
+	@media(max-width: ${({theme}) => theme.tablet}) {
+		visibility: hidden;
+	}
+
+	@media(max-width: ${({theme}) => theme.mobile}) {
+		visibility: hidden;
+	}
+
+	@media(max-width: ${({theme}) => theme.smallerDevices}) {
+		visibility: hidden;
+	}
     
 `

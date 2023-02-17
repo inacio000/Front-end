@@ -231,6 +231,10 @@ export const SearchBox = styled.div`
             width: 100%;
         }
     }
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+		width: 100%;
+	}
 `
 
 export const Gradient = styled.div`

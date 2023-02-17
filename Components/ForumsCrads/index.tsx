@@ -36,13 +36,14 @@ export default function ForumsCards () {
             image: "./images/user.jpg"
         },
         {
-            id: 4,
+            id: 6,
             title: "Será que posso trocar javascript com .NET?",
             discription: "Desde que comecei a estudar .NET eu vi que é coisa de outro mundo manos. Algo super a cima do que eu esperava. e aí eu quis também saber sobre a vossa opnião se hoje em dia posso subistituir o javascript po...",
             image: "./images/user.jpg"
         }
         
     ]
+    
     return (
         <>
             {
@@ -55,7 +56,7 @@ export default function ForumsCards () {
                         </AvatarBox>
                         
                         <Flex>
-                            <Flex1>
+                            <Flex1 key="">
                                 <h2>{forum.title}</h2>
                                 <p>{forum.discription}</p>
                             </Flex1>

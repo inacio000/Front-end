@@ -4,6 +4,23 @@ export const StyledDiv = styled.div`
     display: flex;
     margin-top: 1.5em;
 
+    button {
+        margin-left: -50px;
+
+        @media(max-width: 549px) {
+            margin-left: 0px;
+        }
+    }
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+		display: inline-block;
+        width: 85%;
+        button {
+            width: 100%;
+            margin: auto;
+        }
+	}
+
     @media (max-width: 549px) {
         display: flex;
         flex-direction: column;
@@ -12,18 +29,12 @@ export const StyledDiv = styled.div`
 
         button {
             width: 100%;
-            margin-top: 20px;
             margin-left: 0px;
         }
     }
 
-    button {
-        margin-left: -50px;
 
-        @media(max-width: 549px) {
-            margin-left: 0px;
-        }
-    }
+
 `
 
 export const StyledInput = styled.input`
@@ -32,5 +43,11 @@ export const StyledInput = styled.input`
     background: ${({theme})=> theme.colors.gray};
     border-radius: 25px;
     width: 540px;
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+		display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+	}
 `
 
