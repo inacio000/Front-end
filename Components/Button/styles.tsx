@@ -17,10 +17,11 @@ export const StyledButton = styled.button<buttonProps>`
     justify-content: center;
     grid-gap: 0.9em;
     cursor: pointer;
-    border: 0;
+    border: none;
     @media(max-width: ${({theme}) => theme.mobile}) {
         margin-top: 15px;
-        width: 280px;
+        width: 159px;
+        height: 49px;
     }
 `
 

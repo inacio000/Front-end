@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiLike } from 'react-icons/bi';
 import { FaRegCommentDots } from 'react-icons/fa';
-import { Avatar, AvatarBox, CardFooter, Flex, Flex1, ForumBox } from './styles';
+import { Avatar, AvatarBox, CardFooter, DescriptionMobile, Flex, Flex1, ForumBox } from './styles';
 
 export default function ForumsCards () {
     const forumDate = [
@@ -22,24 +22,6 @@ export default function ForumsCards () {
             title: "Será que posso trocar javascript com .NET?",
             discription: "Desde que comecei a estudar .NET eu vi que é coisa de outro mundo manos. Algo super a cima do que eu esperava. e aí eu quis também saber sobre a vossa opnião se hoje em dia posso subistituir o javascript po...",
             image: "../images/user.jpg"
-        },
-        {
-            id: 4,
-            title: "Será que posso trocar javascript com .NET?",
-            discription: "Desde que comecei a estudar .NET eu vi que é coisa de outro mundo manos. Algo super a cima do que eu esperava. e aí eu quis também saber sobre a vossa opnião se hoje em dia posso subistituir o javascript po...",
-            image: "./images/user.jpg"
-        },
-        {
-            id: 5,
-            title: "Será que posso trocar javascript com .NET?",
-            discription: "Desde que comecei a estudar .NET eu vi que é coisa de outro mundo manos. Algo super a cima do que eu esperava. e aí eu quis também saber sobre a vossa opnião se hoje em dia posso subistituir o javascript po...",
-            image: "./images/user.jpg"
-        },
-        {
-            id: 6,
-            title: "Será que posso trocar javascript com .NET?",
-            discription: "Desde que comecei a estudar .NET eu vi que é coisa de outro mundo manos. Algo super a cima do que eu esperava. e aí eu quis também saber sobre a vossa opnião se hoje em dia posso subistituir o javascript po...",
-            image: "./images/user.jpg"
         }
         
     ]
@@ -59,6 +41,7 @@ export default function ForumsCards () {
                             <Flex1 key="">
                                 <h2>{forum.title}</h2>
                                 <p>{forum.discription}</p>
+                                <DescriptionMobile>{forum.discription.slice(0, 38)}</DescriptionMobile>
                             </Flex1>
                             
                             <CardFooter>

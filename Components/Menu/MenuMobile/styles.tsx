@@ -80,7 +80,7 @@ export const Links = styled.ul`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        opacity 1;
+        opacity: 1;
 
         li{
             font-weight: bold;

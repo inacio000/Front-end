@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface marginProps {
+    marginTop: any;
+    marginBottom: any;
+}
+
 export const SearchResultSection = styled.div`
     max-width: 1400px;
     display: flex;
@@ -12,6 +17,10 @@ export const SearchResultSection = styled.div`
 
     @media(max-width: ${({theme}) => theme.tablet}) {
         padding: 0 60px;
+    }
+
+    @media(max-width: ${({theme}) => theme.smallerDevices}) {
+        padding: 0;
     }
     
 `
@@ -40,13 +49,17 @@ export const ResoultSection = styled.section`
         justify-content: center;
         align-items: center;
     }
+
+    @media(max-width: ${({theme}) => theme.smallerDevices}) {
+        padding: 0 26px;
+    }
     
 `
 
 export const Resoult = styled.div `
     max-width: 1400px;
     width: 100%;
-    margin: 0px auto;
+    margin: 89px auto 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,47 +105,71 @@ export const Resoult = styled.div `
         
         button {
             margin: auto;
-            border: 1px solid #000;
         }
 
     }
     
 `
 
-export const Title = styled.div`
+export const ContainerFlex = styled.div`
+    width: 1400px;
+    margin-top: 0 auto;
+    display: block;
+
+    @media(max-width: ${({theme}) => theme.desktop}) {
+		width: 85%;
+	}
+
+    @media(max-width: ${({theme}) => theme.tablet}) {
+		width: 80%;
+	}
+
+    @media(max-width: ${({theme}) => theme.mobile}) {
+		width: 100%;
+	}
+`
+
+export const Title = styled.div<marginProps>`
     display: flex; 
-    margin-top: 15px;
+    gap: .5rem;
+    margin-top: ${props => props.marginTop || "133px"};
+    margin-bottom: ${props => props.marginBottom || "0px"};
     span {
         color: ${({theme}) => theme.colors.primary};
     }
     
-    span {
-        margin: 10px;
-    }
     h1 {
-        margin-top: 80px;
         font-size: 26px;
         font-weight: bold;
+    }
+
+    @media(max-width: ${({theme}) => theme.smallerDevices}) {
+        padding: 0 26px;
     }
 
 `
 
 export const CardFlexLayout = styled.ul`
-    /* list-style: none; */
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    gap: 2.5em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 55px;
+
+    @media(max-width: ${({theme}) => theme.desktop}) {
+        width: 118%;
+        grid-template-columns: repeat(4, 1fr);
+    }
 
     @media(max-width: ${({theme}) => theme.tablet}) {
-        margin: auto;
-        grid-template-columns: repeat(2, 2fr);
-        gap: 2.5em;
-        border: 1px solid #000;
+        grid-template-columns: repeat(4, 1fr);
 	}
+
+    @media(max-width: 1125px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     @media(max-width: ${({theme}) => theme.mobile}) {
         width: 100%;
-        grid-template-columns: repeat(1, 2fr);
-        gap: 2.5em;
+        grid-template-columns: repeat(1, 1fr);
 	}
 `

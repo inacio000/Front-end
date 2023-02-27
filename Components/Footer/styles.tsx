@@ -223,7 +223,7 @@ export const SearchBox = styled.div`
     justify-content: flex-end;
 
     input {
-        width: 390px;
+        width: 100%;
     }
 
     @media (max-width: 549px) {
@@ -234,6 +234,7 @@ export const SearchBox = styled.div`
 
     @media(max-width: ${({theme}) => theme.mobile}) {
 		width: 100%;
+        justify-content: flex-start;
 	}
 `
 

@@ -10,7 +10,7 @@ import { SearchResultSection, Resoult, ResoultSection, Title } from "./styles";
 import Button from "../../Components/Button";
 import { FaAngleDown } from "react-icons/fa";
 import { CardFlexLayout } from "./styles";
-import { Container } from "../../styles/Container";
+import { ContainerFlex } from "./styles";
 
 interface ArticleDataProps {
     id: number;
@@ -27,7 +27,7 @@ export default function SearchResult () {
     
 
     useEffect(() => {
-        setArticleData(articles.slice(0, 8))
+        setArticleData(articles.slice(0, 4))
     }, [])
     
     return (
@@ -47,8 +47,11 @@ export default function SearchResult () {
                     </Resoult>
                 </ResoultSection>
 
-                <Container display="">
-                    <Title>
+                <ContainerFlex>
+                    <Title 
+                        marginTop={"94px"}
+                        marginBottom={"34px"}
+                    >
                         <h1><span>31</span></h1>
                         <h1>Artigos</h1>
                     </Title>
@@ -62,9 +65,12 @@ export default function SearchResult () {
                             </>
                         ))}
                     </CardFlexLayout>
-                </Container>
+                </ContainerFlex>
 
-                <Title>
+                <Title 
+                    marginTop={"133px"}
+                    marginBottom={"46px"}
+                >
                         <h1><span>7</span></h1>
                         <h1>Forums</h1>
                 </Title>

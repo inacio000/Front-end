@@ -9,6 +9,10 @@ export const ArticleCard = styled.li`
     padding: 20px 15px;
     display: grid;
     grid-gap: 1em;
+
+    @media(max-width: ${({theme}) => theme.smallerDevices}) {
+        padding: 0;
+    }
 `
 
 export const CardHeader = styled.div`
@@ -53,17 +57,32 @@ export const CardHeader = styled.div`
                 opacity: 0.5;
             }
         }
+
+        @media(max-width: ${({theme}) => theme.smallerDevices}) {
+            padding: 30px 30px 14px;
+        }
 `
 export const CardBody = styled.div`
     h3 {
         height: 40px;
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
     }
     img {
         border-radius: 25px;
         width: 100%;
         height: 160px;
         object-fit: cover;
+    }
+
+    @media(max-width: ${({theme}) => theme.smallerDevices}) {
+        h3 {
+            padding-left: 30px;
+        }
+
+        img {
+            height: 255px;
+            border-radius: 0;
+        }
     }
 `
 export const CardFooter = styled.div`
@@ -77,6 +96,10 @@ export const CardFooter = styled.div`
             font-size: 20px;
             opacity: 0.5;
         }
+    }
+
+    @media(max-width: ${({theme}) => theme.smallerDevices}) {
+        padding: 30px;
     }
 `
 
